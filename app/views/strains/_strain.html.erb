@@ -1,0 +1,50 @@
+<div id="<%= dom_id strain %>">
+  <p>
+    <strong><%= strain.name %></strong>
+  </p>
+
+  <p>
+    <%= image_tag strain.photo.variant(resize_to_limit: [300, 300]).processed %>
+  </p>
+
+  <p>
+    <strong>Genotype:</strong>
+    <%= strain.genotype %>
+  </p>
+
+  <p>
+    <strong>Thc level:</strong>
+    <%= strain.thc_level %>
+  </p>
+  
+  <p>
+  <strong>Manufacturer:</strong>
+  <%= strain.manufacturer.name %>
+  </p>
+
+  <p>
+    <strong>Cbd level:</strong>
+    <%= strain.cbd_level %>
+  </p>
+
+  <p>
+    <strong>Flovering period:</strong>
+    <%= strain.flovering_period %>
+  </p>
+
+  <p>
+    <strong>Terpenes:</strong>
+    <%= strain.terpenes %>
+  </p>
+
+  <p>
+    <strong>Aroma:</strong>
+    <%= strain.aroma %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= strain.description %>
+  </p>
+
+</div>

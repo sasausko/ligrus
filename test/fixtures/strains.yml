@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  genotype: MyString
+  thc_level: MyString
+  cbd_level: MyString
+  flovering_period: MyString
+  terpenes: MyString
+  aroma: MyString
+  description: MyText
+
+two:
+  name: MyString
+  genotype: MyString
+  thc_level: MyString
+  cbd_level: MyString
+  flovering_period: MyString
+  terpenes: MyString
+  aroma: MyString
+  description: MyText

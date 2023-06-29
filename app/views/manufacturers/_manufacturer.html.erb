@@ -1,0 +1,22 @@
+<div id="<%= dom_id manufacturer %>">
+  <p>
+    <strong>Name:</strong>
+    <%= manufacturer.name %>
+  </p>
+
+  <p>
+    <strong>Logo:</strong>
+    <%= link_to manufacturer.logo.filename, manufacturer.logo if manufacturer.logo.attached? %>
+  </p>
+
+  <p>
+    <strong>Local:</strong>
+    <%= manufacturer.local %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= manufacturer.description %>
+  </p>
+
+</div>
