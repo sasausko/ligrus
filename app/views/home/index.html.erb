@@ -1,0 +1,13 @@
+<h1>Home</h1>
+<h2>Strains</h2>
+
+<div id="strains">
+  <% @strains.each do |strain| %>
+    <p>
+    <h4>
+      <%= link_to strain.name, strain_path(strain) %> від <%= strain.manufacturer.name %> 
+    </h4>
+  </p>
+  <% end %>
+</div>
+

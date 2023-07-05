@@ -1,6 +1,6 @@
 <div id="<%= dom_id strain %>">
   <p>
-    <strong><%= strain.name %></strong>
+    <strong><h2><%= strain.name %></h2></strong>
   </p>
 
   <p>
@@ -19,7 +19,7 @@
   
   <p>
   <strong>Manufacturer:</strong>
-  <%= strain.manufacturer.name %>
+  <%= link_to   strain.manufacturer.name, manufacturer_path(strain.manufacturer) %>
   </p>
 
   <p>

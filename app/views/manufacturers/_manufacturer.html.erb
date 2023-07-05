@@ -1,8 +1,7 @@
 <div id="<%= dom_id manufacturer %>">
   <p>
-    <strong>Name:</strong>
-    <%= manufacturer.name %>
-  </p>
+  <strong><h2><%= manufacturer.name %></h2></strong>
+      </p>
 
   <p>
     <strong>Logo:</strong>
@@ -18,5 +17,11 @@
     <strong>Description:</strong>
     <%= manufacturer.description %>
   </p>
+  <strong>Strains:</strong></br>
+  <% manufacturer.strains.each do |strain| %>
+    <p>
+      <%= strain.name %> | <%= link_to "View Strain", strain %>
+    </p>
+  <% end %>
 
 </div>

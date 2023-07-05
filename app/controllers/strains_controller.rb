@@ -22,7 +22,6 @@ class StrainsController < ApplicationController
   # POST /strains or /strains.json
   def create
     @strain = Strain.new(strain_params)
-
     respond_to do |format|
       if @strain.save
         format.html { redirect_to strain_url(@strain), notice: "Strain was successfully created." }
@@ -65,6 +64,6 @@ class StrainsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def strain_params
-      params.require(:strain).permit(:name, :photo, :genotype, :thc_level, :cbd_level, :flovering_period, :terpenes, :aroma, :description)
+      params.require(:strain).permit(:name, :photo, :genotype, :thc_level, :cbd_level, :flovering_period, :terpenes, :aroma, :description, :manufacturer_id)
     end
 end
