@@ -146,6 +146,10 @@
     font-weight: bold;
   }
 
+  .header span {
+    font-size: 32px;
+  }
+
   a.link-li {
     color: #ffaa00;
     border-color: #ffaa00;

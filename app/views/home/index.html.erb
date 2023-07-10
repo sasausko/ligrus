@@ -10,3 +10,15 @@
   <% end %>
 </div>
 
+<h2>Articles</h2>
+
+<div id="strains">
+  <% @articles.each do |article| %>
+    <p>
+    <h4>
+      <%= link_to article.name, article_path(article) %>
+    </h4>
+  </p>
+  <% end %>
+</div>
+
