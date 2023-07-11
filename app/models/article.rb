@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
+    has_rich_text :body
 
   def tag_list=(tags_string)
     tag_names = tags_string.split(",").collect{|s| s.strip.downcase}.uniq

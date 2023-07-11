@@ -12,8 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
- * Reset стилі для забезпечення спільної основи */
+ /* Reset стилі для забезпечення спільної основи */
 
  html, body, div, span,
  h1, h2, h3, h4, h5, h6, p, a,
@@ -141,8 +142,6 @@
     color: #333;
     text-decoration: none;
     background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 10px;
     font-weight: bold;
   }
 
@@ -153,16 +152,25 @@
   a.link-li {
     color: #ffaa00;
     border-color: #ffaa00;
+    border: 2px solid;
+    border-radius: 10px;
+
   }
    
   a.link-gr {
     color: green;
     border-color: green;
+    border: 2px solid;
+    border-radius: 10px;
+
   }
 
   a.link-us {
     color: red;
     border-color: red;
+    border: 2px solid;
+    border-radius: 10px;
+
   }
 
    .section-beus {
