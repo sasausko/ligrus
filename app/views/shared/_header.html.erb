@@ -1,0 +1,29 @@
+<div class="logo">
+  <span style="color: #ffaa00;">li</span>
+  <span style="color: green;">gr</span>
+  <span style="color: red;">us</span>
+</div>
+ <header class="header">
+    <ul>
+      <% unless current_page?(root_path) %>
+        <li><strong><%= link_to "home", root_path, class: "material-icons" %></strong></li>
+      <% end %>
+      <li><a class="material-icons" href="#">info</a></li>
+    </ul>
+    <ul>
+      <li><%= link_to "Статті", articles_path, class: "link-li" %></li>
+      <li><%= link_to "Сорти", strains_path, class: "link-gr" %></li>
+      <li><%= link_to "Бути корисним", home_beuseful_path, class: "link-us" %></li>
+    </ul>
+      <div class="user-menu" data-controller="dropdown" data-dropdown-open-value="false">
+        <a class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">person</a>
+        <div class="user-menu-content" data-dropdown-target="dropdownContent">
+          <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Registration</a></li>
+          </ul>
+
+        </div>
+      </div>
+  </header>
+

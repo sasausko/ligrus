@@ -130,7 +130,7 @@
   
   .header li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   
   .header li:last-child {
@@ -145,8 +145,12 @@
     font-weight: bold;
   }
 
-  .header span {
-    font-size: 32px;
+  .logo {
+    text-align: center;
+  }
+
+  .logo span {
+    font-size: 42px;
   }
 
   a.link-li {
@@ -173,31 +177,46 @@
 
   }
 
-   .section-beus {
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
+  .user-menu {
+    position: relative;
+    display: inline-block;
+  }
 
-    .image-beus {
-      max-width: 200px;
-    }
+  .user-menu-content {
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+  }
+/* Стилі beuseful*/
+  .section-beus {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
 
-    .description-beus {
-      margin-top: 20px;
-    }
+  .image-beus {
+    max-width: 200px;
+  }
 
-    .support-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: blue;
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
+  .description-beus {
+    margin-top: 20px;
+  }
+
+  .support-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
     }
 
 /* Інші стилізації, зображення, кнопки, і т.д. */

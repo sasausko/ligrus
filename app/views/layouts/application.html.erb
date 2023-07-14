@@ -11,26 +11,7 @@
   </head>
 
   <body>
-    <header class="header">
-    <ul>
-      <% unless current_page?(root_path) %>
-        <li><strong><%= link_to "home", root_path, class: "material-icons" %></strong></li>
-      <% else %>
-          <span style="color: #ffaa00;">li</span>
-          <span style="color: green;">gr</span>
-          <span style="color: red;">us</span>
-      <% end %>
-      <li><a class="material-icons" href="#">info</a></li>
-    </ul>
-    <ul>
-      <li><%= link_to "Статті", articles_path, class: "link-li" %></li>
-      <li><%= link_to "Сорти", strains_path, class: "link-gr" %></li>
-      <li><%= link_to "Бути корисним", home_beuseful_path, class: "link-us" %></li>
-    </ul>
-    <ul>
-      <a class="material-icons" href="#">person</a>
-    </ul>
-  </header>
+    <%= render 'shared/header' %>
     <%= yield %>
   </body>
 </html>
