@@ -5,10 +5,8 @@
 </div>
  <header class="header">
     <ul>
-      <% unless current_page?(root_path) %>
-        <li><strong><%= link_to "home", root_path, class: "material-icons" %></strong></li>
-      <% end %>
-      <li><a class="material-icons" href="#">info</a></li>
+      <li><%= link_to "info", root_path, class: "material-icons" %></li>
+      <li><a class="material-icons" href="#">settings</a></li>
     </ul>
     <ul>
       <li><%= link_to "Статті", articles_path, class: "link-li" %></li>
