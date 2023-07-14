@@ -15,6 +15,19 @@
       <li><%= link_to "Сорти", strains_path, class: "link-gr" %></li>
       <li><%= link_to "Бути корисним", home_beuseful_path, class: "link-us" %></li>
     </ul>
+      <ul>
+        <li><div class="user-menu" data-controller="dropdown" data-dropdown-open-value="false">
+        <a class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">search</a>
+        <div class="user-menu-content" data-dropdown-target="dropdownContent">
+          <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Registration</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </li>
+    <li>
       <div class="user-menu" data-controller="dropdown" data-dropdown-open-value="false">
         <a class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">person</a>
         <div class="user-menu-content" data-dropdown-target="dropdownContent">
@@ -25,5 +38,17 @@
 
         </div>
       </div>
+      </li>
+    </ul>
+
   </header>
+    <div id="flash">
+
+      <% flash.each do |key, value| %>
+
+        <div class="flash <%= key %>"><%= value %></div>
+
+      <% end %>
+
+    </div>
 
