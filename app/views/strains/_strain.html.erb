@@ -1,50 +1,57 @@
 <div id="<%= dom_id strain %>">
+  <div class="container">
   <p>
     <strong><h2><%= strain.name %></h2></strong>
   </p>
+  <div class="cont-flex">
+  <div class="strain-img">
+    <%= image_tag strain.photo %>
+  </div>
+  <div class="strain-details">
+  <p>
+  <%= image_tag 'man.png', class: 'str-icon' %>
 
-  <p>
-    <%= image_tag strain.photo.variant(resize_to_limit: [300, 300]).processed %>
-  </p>
-
-  <p>
-    <strong>Genotype:</strong>
-    <%= strain.genotype %>
-  </p>
-
-  <p>
-    <strong>Thc level:</strong>
-    <%= strain.thc_level %>
-  </p>
-  
-  <p>
-  <strong>Manufacturer:</strong>
   <%= link_to   strain.manufacturer.name, manufacturer_path(strain.manufacturer) %>
   </p>
 
   <p>
-    <strong>Cbd level:</strong>
+    <%= image_tag 'gen.png', class: 'str-icon' %>
+
+    <%= strain.genotype %>
+  </p>
+
+  <p>
+  <%= image_tag 'thc.png', class: 'str-icon' %>
+    <%= strain.thc_level %>
+  </p>
+  
+  <p>
+    <%= image_tag 'cbd.png', class: 'str-icon' %>
+
     <%= strain.cbd_level %>
   </p>
 
   <p>
-    <strong>Flovering period:</strong>
+    <%= image_tag 'period.png', class: 'str-icon' %>
+
     <%= strain.flovering_period %>
   </p>
 
   <p>
-    <strong>Terpenes:</strong>
+    <%= image_tag 'terpenes.png', class: 'str-icon' %>
+
     <%= strain.terpenes %>
   </p>
 
   <p>
-    <strong>Aroma:</strong>
+    <%= image_tag 'aroma.png', class: 'str-icon' %>
+
     <%= strain.aroma %>
   </p>
-
+  </div>
+  </div>
   <p>
-    <strong>Description:</strong>
     <%= strain.description %>
   </p>
-
+  </div>
 </div>
