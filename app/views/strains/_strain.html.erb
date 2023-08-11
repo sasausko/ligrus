@@ -1,13 +1,12 @@
 <div id="<%= dom_id strain %>">
-  <div class="container">
   <p>
     <strong><h2><%= strain.name %></h2></strong>
   </p>
-  <div class="cont-flex">
-  <div class="strain-img">
+  <div class="grid">
+  <div>
     <%= image_tag strain.photo %>
   </div>
-  <div class="strain-details">
+  <div>
   <p>
   <%= image_tag 'man.png', class: 'str-icon' %>
 
@@ -53,5 +52,4 @@
   <p>
     <%= strain.description %>
   </p>
-  </div>
 </div>

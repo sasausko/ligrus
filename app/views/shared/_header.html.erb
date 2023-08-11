@@ -3,7 +3,7 @@
   <span style="color: green;">gr</span>
   <span style="color: red;">us</span>
 </div>
- <header class="header">
+ <nav>
     <ul>
       <li><%= link_to "info", root_path, class: "material-icons" %></li>
       <li><a class="material-icons" href="#">settings</a></li>
@@ -13,32 +13,23 @@
       <li><%= link_to "Сорти", strains_path, class: "link-gr" %></li>
       <li><%= link_to "Бути корисним", home_beuseful_path, class: "link-us" %></li>
     </ul>
-      <ul>
-        <li><div class="user-menu" data-controller="dropdown" data-dropdown-open-value="false">
-        <a class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">search</a>
-        <div class="user-menu-content" data-dropdown-target="dropdownContent">
-          <ul>
+    <ul>
+    <li role="list" dir="rtl" data-controller="dropdown" data-dropdown-open-value="false">
+        <a aria-haspopup="listbox" class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">search</a>
+        <ul role="listbox" data-dropdown-target="dropdownContent">
           <li><input type="text" placeholder="Search.."></li>
           </ul>
-
-        </div>
-      </div>
     </li>
-    <li>
-      <div class="user-menu" data-controller="dropdown" data-dropdown-open-value="false">
-        <a class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">person</a>
-        <div class="user-menu-content" data-dropdown-target="dropdownContent">
-          <ul>
+    <li role="list" dir="rtl" data-controller="dropdown" data-dropdown-open-value="false">
+        <a aria-haspopup="listbox" class="material-icons" data-dropdown-target="activated" data-action="click->dropdown#toggleDropdown">person</a>
+        <ul role="listbox" data-dropdown-target="dropdownContent">
           <li><a href="#">Login</a></li>
           <li><a href="#">Registration</a></li>
           </ul>
-
-        </div>
-      </div>
-      </li>
+    </li>
     </ul>
 
-  </header>
+  </nav>
     <div id="flash">
 
       <% flash.each do |key, value| %>

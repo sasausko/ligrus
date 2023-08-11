@@ -1,153 +1,9 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  *= require material_icons
  */
  /* Reset стилі для забезпечення спільної основи */
-
- html, body, div, span,
- h1, h2, h3, h4, h5, h6, p, a,
- img, ul, ol, li, table, tr, td,
- form, input, textarea, button {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-family: inherit;
-   font-size: inherit;
-   font-weight: inherit;
-   line-height: inherit;
-   vertical-align: baseline;
- }
- 
- /* Основні стилі */
- 
- body {
-   font-family: Arial, sans-serif;
-   font-size: 16px;
-   line-height: 1.5;
-   color: #333;
-   max-width: 1170px;
-   margin-left: auto;
-   margin-right: auto;
- }
- 
- h1, h2, h3, h4, h5, h6 {
-   margin-bottom: 1em;
-   font-weight: bold;
- }
- 
- p {
-   margin-bottom: 1em;
- }
- 
- a {
-   color: #007bff;
-   text-decoration: none;
- }
- 
- a:hover {
-   text-decoration: underline;
- }
- 
- /* Простий навігаційний меню */
- 
- .nav {
-   background-color: #f2f2f2;
-   padding: 10px;
- }
- 
- .nav ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
- }
- 
- .nav li {
-   display: inline-block;
-   margin-right: 10px;
- }
- 
- .nav a {
-   display: block;
-   padding: 5px;
- }
- 
- /* Простий футер */
- 
- .footer {
-   background-color: #f2f2f2;
-   padding: 20px;
-   text-align: center;
- }
- 
- /* Контейнер */
- 
- .container {
-   max-width: 1170px;
-   margin: 0 auto;
-   padding: 20px;
- }
-
- .cont-flex {
-   display: flex;
- }
- 
- /* Простий форматування таблиць */
- 
- table {
-   border-collapse: collapse;
-   width: 100%;
- }
- 
- table th, table td {
-   padding: 8px;
-   border: 1px solid #ccc;
- }
-
- /* Стилі для шапки */
-
-.header {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header li {
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  .header li:last-child {
-    margin-right: 0px;
-  }
-  .header a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    background-color: #fff;
-    font-weight: bold;
-  }
 
   .logo {
     text-align: center;
@@ -181,22 +37,6 @@
 
   }
 
-  .user-menu {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-  }
-
-  .user-menu-content {
-    right: 0;
-    position: absolute;
-    z-index: 1;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: left;
-    background-color: white;
-  }
 /* Стилі beuseful*/
   .section-beus {
     border: 2px solid;
@@ -228,18 +68,8 @@
     max-width: 36px;
   }
 
-  .strain-img {
-    width: 50%;
-    text-align: center;
+  nav ul li[role=list] > a::after {
+  background-image: none;
+  content: none;
   }
 
-  .strain-img img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .strain-details {
-    width: 50%;
-    padding-left: 50px;
-  }
- 
