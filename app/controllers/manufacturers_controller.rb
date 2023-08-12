@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ManufacturersController < ApplicationController
-  before_action :set_manufacturer, only: %i[ show edit update destroy ]
+  before_action :set_manufacturer, only: %i[show edit update destroy]
 
   # GET /manufacturers or /manufacturers.json
   def index
@@ -7,8 +9,7 @@ class ManufacturersController < ApplicationController
   end
 
   # GET /manufacturers/1 or /manufacturers/1.json
-  def show
-  end
+  def show; end
 
   # GET /manufacturers/new
   def new
@@ -16,8 +17,7 @@ class ManufacturersController < ApplicationController
   end
 
   # GET /manufacturers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /manufacturers or /manufacturers.json
   def create
@@ -25,7 +25,7 @@ class ManufacturersController < ApplicationController
 
     respond_to do |format|
       if @manufacturer.save
-        format.html { redirect_to manufacturer_url(@manufacturer), notice: "Manufacturer was successfully created." }
+        format.html { redirect_to manufacturer_url(@manufacturer), notice: 'Manufacturer was successfully created.' }
         format.json { render :show, status: :created, location: @manufacturer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class ManufacturersController < ApplicationController
   def update
     respond_to do |format|
       if @manufacturer.update(manufacturer_params)
-        format.html { redirect_to manufacturer_url(@manufacturer), notice: "Manufacturer was successfully updated." }
+        format.html { redirect_to manufacturer_url(@manufacturer), notice: 'Manufacturer was successfully updated.' }
         format.json { render :show, status: :ok, location: @manufacturer }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +52,20 @@ class ManufacturersController < ApplicationController
     @manufacturer.destroy
 
     respond_to do |format|
-      format.html { redirect_to manufacturers_url, notice: "Manufacturer was successfully destroyed." }
+      format.html { redirect_to manufacturers_url, notice: 'Manufacturer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_manufacturer
-      @manufacturer = Manufacturer.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def manufacturer_params
-      params.require(:manufacturer).permit(:name, :logo, :local, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_manufacturer
+    @manufacturer = Manufacturer.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def manufacturer_params
+    params.require(:manufacturer).permit(:name, :logo, :local, :description)
+  end
 end
